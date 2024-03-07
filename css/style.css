@@ -4,10 +4,10 @@
     box-sizing: border-box;
 }
 
-ul {
+#header {
     background: darkgray;
     display: flex;
-    width: 100vw;
+    width: 100%;
     justify-content: space-around;
     align-items: center;
     list-style: none;
@@ -80,42 +80,93 @@ a:hover {
 #gridwrapper_1 {
     display: grid;
     height: 400px;
-    grid-template-rows: 1fr 50px;
-    grid-template-columns: 1fr 3fr 1fr;
-    grid-template-areas:
-    "se1 se2 se3"
-    "se4 se4 se4";
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-areas: "se1 se2 se3";
 }
+
 
 #se_1 {
     grid-area: se1; 
+    background-color: lightgrey;
 }
 
-#se_2{
+#se_2 {
     grid-area: se2;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: lightgrey;
 }
 
-#se_1 {
+#se_3 {
     grid-area: se3;
+    background-color: lightgrey;
 }
 
 #se_4 {
     grid-area: se4;
-    width: 600px;
-    background-color: lightgray;
+    background-color: darkgray;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    margin-left: 340px;
-}
+    width: 1263px; 
+    /* ^^ fixa så att den är konstant inte i pixel form */
+    height: 50px;
+    }
 
-#suit{
-    width: 600px;
-    height: auto;   
+#suit {
+    width: auto;
+    height: 350px;
 }
 
 #suit_text {
-    font-size: 1.5rem;
+    margin-top: 10px; 
+    font-size: 1.25rem;
+    
+}
+
+#gridwrapper_2 {
+    background-color: lightgrey;
+    height: 600px;
+    display: grid;
+    grid-template-rows: 0.5fr 3fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+    "mh1 mh1 mh1"
+    "se5 se6 se7"
+    "foo foo foo";
+
+}
+
+#mini_head_1 {
+    grid-area: mh1;
+    background-color: aqua;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#se_5 {
+    grid-area: se5;
+    background-color: rgb(229, 255, 0);
+
+}
+
+#se_6 {
+    grid-area: se6;
+    background-color: rgb(68, 0, 255);
+
+}
+
+#se_7 {
+    grid-area: se7;
+    background-color: rgb(120, 56, 57);
+
+}
+
+footer {
+    grid-area: foo;  
+    background-color: rgb(39, 44, 44);
+  
 }
