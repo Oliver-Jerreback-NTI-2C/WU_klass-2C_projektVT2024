@@ -8,7 +8,6 @@
 #header {
     background: darkgray;
     display: flex;
-    width: 100%;
     justify-content: space-around;
     align-items: center;
     list-style: none;
@@ -83,19 +82,18 @@ a:hover {
 
 #gridwrapper_1 {
     display: grid;
-    height: 400px;
     grid-template-rows: 1fr;
     grid-template-columns: 1fr 4fr 1fr;
     grid-template-areas: "se1 se2 se3";
 }
 
 
-#se_1 {
+#se1 {
     grid-area: se1; 
     background-color: lightgrey;
 }
 
-#se_2 {
+#se2 {
     grid-area: se2;
     display: flex;
     flex-direction: column;
@@ -104,12 +102,12 @@ a:hover {
     padding: 20px;
 }
 
-#se_3 {
+#se3 {
     grid-area: se3;
     background-color: lightgrey;
 }
 
-#se_4 {
+#se4 {
     grid-area: se4;
     background-color: lightgray;
     display: flex;
@@ -131,7 +129,6 @@ a:hover {
 
 #gridwrapper_2 {
     background-color: lightgrey;
-    height: 720px;
     display: grid;
     grid-template-rows: 1fr 3fr 2fr;
     grid-template-columns: 1fr 1fr 1fr;
@@ -149,17 +146,17 @@ a:hover {
     justify-content: center;
 }
 
-#se_5 {
+#se5 {
     grid-area: se5;
     background-color: lightgrey;
 }
 
-#se_6 {
+#se6 {
     grid-area: se6;
     background-color: lightgrey;
 }
 
-#se_7 {
+#se7 {
     grid-area: se7;
     background-color: lightgrey;
 }
@@ -201,7 +198,7 @@ footer {
     padding: 0;
     margin: 0;
     display: flex;
-    justify-content: center; /* Center the icons horizontally */
+    justify-content: center; 
 }
 
 .social-icons li {
@@ -211,15 +208,15 @@ footer {
 
 .social-icons li a {
     color: darkgrey;
-    font-size: 24px; /* Adjust the font size of the icons */
+    font-size: 24px; 
     display: flex;
-    align-items: center; /* Align the icon vertically */
+    align-items: center; 
 }
 
 .social-icons li img {
-    width: 24px; /* Set the width of the images */
-    height: auto; /* Maintain aspect ratio */
-    margin-right: 5px; /* Adjust spacing between icon and text */
+    width: 24px; 
+    height: auto; 
+    margin-right: 5px; 
 }
 
 
@@ -229,7 +226,6 @@ footer {
 
 #gridwrapper_3 {
     background-color: lightgrey;
-    height: 725px;
     display: grid;
     grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr 1fr 1fr;
@@ -291,3 +287,85 @@ footer {
     margin-top: 10px;
  
 }
+
+#gridwrapper_4 {
+    background-color: lightgrey;
+    display: grid;
+    grid-template-rows: 100px 1.5fr 1fr;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    "hea"
+    "se15"
+    "foo";
+}
+
+#se15 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Added to center vertically */
+}
+
+.omossp {
+    text-align: center; /* Added to center horizontally */
+    margin-bottom: 10px;
+}
+
+#gridwrapper_5 {
+    background-color: lightgrey;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-areas:
+    "se16 se17 se18";
+}
+
+#se16 {
+    display: grid;
+    grid-area: se16;
+}
+
+#se17 {
+    display: grid;
+    grid-area: se17;
+}
+
+#se18 {
+    display: grid;
+    grid-area: se18;
+}
+
+.arrow_img {
+    width: 50px;
+    height: auto;
+    margin: 10px;
+} 
+
+#img_bildspel {
+    width: 250px;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#bildspel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+    background-color: white;
+}
+
+#se18 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#se16 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
