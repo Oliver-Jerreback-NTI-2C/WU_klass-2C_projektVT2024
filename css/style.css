@@ -161,7 +161,6 @@ a:hover {
     background-color: lightgrey;
 }
 
-
 #suit_rekkomendation {
     width: 421px; 
     height: 450px;
@@ -291,20 +290,37 @@ footer {
 #gridwrapper_4 {
     background-color: lightgrey;
     display: grid;
-    grid-template-rows: 100px 1.5fr 1fr;
-    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 2fr 1fr;
     grid-template-areas:
-    "hea"
-    "se15"
-    "foo";
+    "se15 se16 se17"
 }
 
 #se15 {
+    grid-area: se15;
+    background-color: lightgrey;
+} 
+
+#se16 {
+    grid-area: se16;
+    padding: 10px;
+}
+
+#holder {
+    background-color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center; /* Added to center vertically */
+    padding: 20px;
+
 }
+
+#se17 {
+    grid-area: se17;
+    background-color: lightgrey;
+    
+} 
 
 .omossp {
     text-align: center; /* Added to center horizontally */
@@ -317,22 +333,32 @@ footer {
     grid-template-rows: 1fr;
     grid-template-columns: 1fr 2fr 1fr;
     grid-template-areas:
-    "se16 se17 se18";
-}
-
-#se16 {
-    display: grid;
-    grid-area: se16;
-}
-
-#se17 {
-    display: grid;
-    grid-area: se17;
+    "se18 se19 se20";
 }
 
 #se18 {
     display: grid;
     grid-area: se18;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#bildspel {
+    height: 400px;
+}
+
+#se19 {
+    display: grid;
+    grid-area: se19;
+}
+
+#se20 {
+    display: grid;
+    grid-area: se20;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .arrow_img {
@@ -343,29 +369,34 @@ footer {
 
 #img_bildspel {
     width: 250px;
-    height: auto;
+    height: 350px;
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    left: 40%;
+    padding-top: 10px;
 }
 
-#bildspel {
+#img_text {
+    width: auto;
+    height: 125px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 360px;
+}
+
+#galleri {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 10px;
     background-color: white;
+    height:500px;
+    width: 800px;
 }
 
-#se18 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#se16 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 

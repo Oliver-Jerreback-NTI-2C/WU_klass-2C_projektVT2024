@@ -1,20 +1,30 @@
-const arrowLeft = document.getElementById('arrow_left')
-const arrowRight = document.getElementById('arrow_right')
+const arrowLeft = document.getElementById('se18');
+const arrowRight = document.getElementById('se20');
 
-var imgGalleryImgSources = ["img/bildspel/bildspel_1.jpg", "img/bildspel/bildspel_2.jpg", "img/bildspel/bildspel_3.jpg", "img/bildspel/bildspel_4.jpg", "img/bildspel/bildspel_5.jpg", "img/bildspel/bildspel_6.jpg"]
-var imgGalleryIndex = 0
+var bildspelImgSources = ["img/bildspel/bildspel_1.jpg", "img/bildspel/bildspel_2.jpg", "img/bildspel/bildspel_3.jpg", "img/bildspel/bildspel_4.jpg"];
+var textImgSources = ["img/bildspel_text/text_1.jpg", "img/bildspel_text/text_2.jpg", "img/bildspel_text/text_3.jpg", "img/bildspel_text/text_4.jpg"];
+var bildspelIndex = 0;
 
 function newImageRight() {
-    if (imgGalleryIndex == imgGalleryImgSources.length - 1) {imgGalleryIndex = 0}
-    else {imgGalleryIndex = imgGalleryIndex + 1}
-    document.getElementById('gallery_img').src = imgGalleryImgSources[imgGalleryIndex]
+    if (bildspelIndex == bildspelImgSources.length - 1) {
+        bildspelIndex = 0;
+    } else {
+        bildspelIndex++;
+    }
+    document.getElementById('img_bildspel').src = bildspelImgSources[bildspelIndex];
+    document.getElementById('img_text').src = textImgSources[bildspelIndex];
 }
 
 function newImageLeft() {
-    if (imgGalleryIndex == 0) {imgGalleryIndex = imgGalleryImgSources.length - 1}
-    else {imgGalleryIndex = imgGalleryIndex - 1}
-    document.getElementById('gallery_img').src = imgGalleryImgSources[imgGalleryIndex]
+    if (bildspelIndex == 0) {
+        bildspelIndex = bildspelImgSources.length - 1;
+    } else {
+        bildspelIndex--;
+    }
+    document.getElementById('img_bildspel').src = bildspelImgSources[bildspelIndex];
+    document.getElementById('img_text').src = textImgSources[bildspelIndex];
 }
 
-arrowLeft.addEventListener('click', newImageLeft)
-arrowRight.addEventListener('click', newImageRight)
+arrowLeft.addEventListener('click', newImageLeft);
+arrowRight.addEventListener('click', newImageRight);
+
