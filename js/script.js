@@ -1,3 +1,15 @@
+//hamburgarmeny
+const burger = document.getElementById('burger')
+const linkList = document.getElementById('link_list')
+
+function toggleMenu() {
+    linkList.classList.toggle('link_visible')
+    burger.classList.toggle('burger_in_x_form')
+}
+
+burger.addEventListener('click', toggleMenu)
+
+//recension
 const arrowLeft = document.getElementById('se18');
 const arrowRight = document.getElementById('se20');
 
@@ -24,6 +36,7 @@ function newImageLeft() {
     document.getElementById('img_bildspel').src = bildspelImgSources[bildspelIndex];
     document.getElementById('img_text').src = textImgSources[bildspelIndex];
 }
+
 
 arrowLeft.addEventListener('click', newImageLeft);
 arrowRight.addEventListener('click', newImageRight);
