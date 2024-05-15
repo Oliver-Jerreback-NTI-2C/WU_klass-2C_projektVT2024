@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: barlow condensed, sans-serif;
     
 }
 
@@ -80,50 +81,31 @@ a:hover {
     text-decoration: underline;
 }
 
-#gridwrapper_1 {
-    display: grid;
-    grid-template-rows: 1fr;
-    grid-template-columns: 1fr 4fr 1fr;
-    grid-template-areas: "se1 se2 se3";
-}
-
-
-#se1 {
-    grid-area: se1; 
-    background-color: lightgrey;
-}
-
-#se2 {
-    grid-area: se2;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: lightgrey;
-    padding: 20px;
-}
-
-#se3 {
-    grid-area: se3;
-    background-color: lightgrey;
-}
-
 #se4 {
-    grid-area: se4;
-    background-color: lightgray;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 50px;
-    }
+    position: absolute;
+    top:30%;
+    left: 7%;
+}
 
 #suit_1 {
-    width: 300px;
-    height: 350px;
-    border-radius: 10px;
+    background-size: cover;
+    width: 100%;
+    height: 600px;
 }
 
-#suit_text { 
-    font-size: 1.25rem;   
+#övertext {
+    font-size: 1rem;
+    width: 400px;
+    font-weight: normal;
+    text-transform: uppercase;
+
+}
+
+#underrubik_index {
+    font-size: 3rem;
+    text-transform: capitalize;
+    width: 400px;
+    word-spacing: 0;
 }
 
 #gridwrapper_2 {
@@ -143,6 +125,12 @@ a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+#mini_text {
+    font-size: 1.25rem;
+    text-transform: capitalize;
+    word-spacing: 0;
 }
 
 #se5 {
@@ -313,6 +301,7 @@ footer {
     background-color: white;
     padding: 20px;
     border-radius: 20px;
+    height: 450px;
 }
 
 #se17 {
@@ -327,13 +316,18 @@ footer {
 }
 
 .omossp {
-    text-align: center;
     margin-bottom: 15px;
+}
+
+.rubrik_om_oss {
+    font-size: 1.25rem;
+    text-transform: capitalize;
+    word-spacing: 0;
 }
 
 #om_oss_suit {
     width: 100%;
-    height: 70vh;
+    height: 100%;
     border-radius: 20px;
 }
 
@@ -384,6 +378,8 @@ footer {
     width: 225px;
     height: 80vh;
     border-radius: 20px; 
+    margin-top: 5px;
+
 }
 
 #bildspel {
@@ -414,22 +410,70 @@ footer {
     justify-self: center;
 }
 
+#vanster {
+    margin: 10px;
+    grid-area: va;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas:
+    "ic na"
+    "ic pl"
+    "da da";
+}
+
+#icon {
+    grid-area: ic;
+}
+
+#pfp {
+    width: 100%;
+    height: auto;
+}
+
+#namn {
+    grid-area: na;
+    display: flex;
+    align-self: end;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+#plats {
+    grid-area: pl;
+    display: flex;
+    align-self: flex-start;
+    justify-content: center;
+    font-weight: bold;
+    color: gray;
+    font-size: 0.75rem;   
+}
+
 #datum {
     grid-area: da;
     display: flex;
     align-self: center;
     justify-self: center;
-
+    color: gray;
 }
 
 #text {
     grid-area: tx;
     background-color: white;
     display: flex;
-    align-self: center;
-    justify-self: center;
+    flex-direction: column;
+    margin-left: 20px;
+    margin-top: 28px;
+}
+
+#underrubrik {
     font-size: 1.5rem;
-    text-align: center;
+    font-weight: bold;
+}
+
+#text_recension {
+    font-size: 1rem;
 }
 
 #galleri {
@@ -443,7 +487,7 @@ footer {
     grid-template-rows: 1fr 0.4fr;
     grid-template-areas:
     "t1 bs t2"
-    "da tx st";
+    "va tx st";
 
 }
 
@@ -457,12 +501,9 @@ nav {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
-    
         --burgerline_width: 30px;
         --burgerline_height: 5px;
         --burgerline_margin: 6px;
-    
-    
         --background_color: darkgrey;
     }
 
@@ -499,6 +540,28 @@ nav {
     
     #header {
         display: none;
+    }
+
+
+    #övertext {
+        font-size: 0.75rem;
+        width: 200px;    
+    }
+    
+    #underrubik_index {
+        font-size: 1.25rem;
+        width: 300px;
+    }
+
+    #suit_1 {
+        height: 300px;
+    }
+
+
+    #se4 {
+        position: absolute;
+        top:30%;
+        left: 2%;
     }
 
     #se15 {
@@ -611,6 +674,10 @@ nav {
         width: 100%;
     }
 
+    #mini_text {
+        font-size: 1rem;
+    }
+
     #galleri {
         display: flex;
         flex-direction: column;
@@ -619,7 +686,7 @@ nav {
         background-color: white;
         border-radius: 20px;
         width: 100%;
-        height: 400px;
+        height: 600px;
     }
 
     #bildspel {
@@ -669,22 +736,55 @@ nav {
     } 
 
     #img_bildspel {
-        width: 175px;
-        height: 300px;
-        padding-top: 10px;
-        border-radius: 20px;    
+        width: 225px;
+        height: 350px;
+
     }
     
     #text{
         font-size: 1.25rem;
         display: flex;
         flex-direction: column;
+    }
 
+    #pfp {
+        width: 50%;
+        height: auto;
+        display: flex;
+        margin-left: 35px;
+    }
+
+    #namn {
+        display: flex;
+        justify-content: start;
+        align-items: center;
 
     }
 
+    #plats {
+        display: flex;
+        justify-content: start;
+        align-items: center;
 
+    } 
 
+    #underrubrik {
+        font-size: 1.25rem;
+    }
+    
+    #text_recension {
+        font-size: 0.75rem;
+    }
+
+    #stars {
+        width: 150px;
+        height: auto;
+    }
+
+    .holder {
+        height: 700px;
+    }
+    
 }
 
 
